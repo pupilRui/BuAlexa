@@ -100,7 +100,7 @@ def main(model, english, energy, pause, dynamic_energy, wake_word, verbose):
     # - Define the reply() function that generates a text response using the OpenAI API and converts it 
     #   + to audio using gTTS. The audio response is played and the temporary file is removed.
     ###########################################################################################################
-    threading.Thread(target=reply, args=(result_queue,)).start()
+    threading.Thread(target=reply, args=(result_queue, verbose,)).start()
 
     ###########################################################################################################
     # - Infinite Loop
